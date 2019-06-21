@@ -39,8 +39,10 @@ namespace GradesPrototype.Views
                 {
                     if (student.TeacherUserId == SessionContext.CurrentTeacher.UserId)
                     {
-                        // TODO: Exercise 2: Task 2b: Load User and Grades data with Students
-                        list.Items.Add(student);
+                    // TODO: Exercise 2: Task 2b: Load User and Grades data with Students
+                    SessionContext.DBContext.LoadProperty(student, "User");
+                    SessionContext.DBContext.LoadProperty(student, "Grades");
+                    list.Items.Add(student);
                     }
                 }
 
