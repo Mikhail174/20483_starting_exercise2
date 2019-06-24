@@ -91,8 +91,9 @@ namespace GradesPrototype.Controls
                     Guid teacherID = SessionContext.CurrentTeacher.UserId ;
 
                     SessionContext.CurrentTeacher.EnrollInClass(student);
-                    
+
                     // TODO: Exercise 2: Task 3a: Specify that the selected student has been changed
+                    SessionContext.DBContext.UpdateObject(student);
 
                     SessionContext.Save();
 

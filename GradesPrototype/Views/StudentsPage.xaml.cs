@@ -115,7 +115,7 @@ namespace GradesPrototype.Views
 
                     // Add the student to the Students collection
                     // TODO: Exercise 2: Task 2i: Use the AddToStudents method to add a new student
-                    SessionContext.DBContext.Students.Add(newStudent);
+                    SessionContext.DBContext.AddToStudents(newStudent);
                     SessionContext.Save();
                 }
             }
